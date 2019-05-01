@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Shirui Ye | Lab 5 Assignment </title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="lab5_assignment.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <!--The web page fits requirements perfectly. Real content, responisve layout (2-column and 1-column), nav bar
+    header, tagline, footer and so on. As for the font, I included Helvetica Neue or Lucida Grande as my Mac-friendly font,
+    Lucida Sans or Lucida Sans Unicode as my PC-friendly font, and sans-serifas my generic font family.-->
+    <header class="bg-secondary">
+      <h3 class="title">Sample Web Page</h3>
+      <p class="title_p">This is a sample page that uses most recent web developing techniques —— Bootstrap,SaSS,Web animation</p>
+    </header>
+    <div class="container-fluid p-0 no-x-bar">
+        <div class="row">
+          <div class="col-sm-3 bg-dark">
+            <!--small screen nav settings-->
+            <div class="small_nav">
+              <nav class="navbar bg-dark move_left content_p">
+               <a class="nav-link text-info" href="#">Home</a>
+               <a class="nav-link text-info" href="#">About</a>
+               <a class="nav-link text-info" href="#">Blog</a>
+               <a class="nav-link text-info" href="#">Contact</a>
+               </nav>
+            </div>
+            <!--large screen nav settings-->
+            <div class="large_nav">
+            <nav class="nav flex-column bg-dark move_left content_p">
+             <a class="nav-link text-info" href="#">Home</a>
+             <a class="nav-link text-info" href="#">About</a>
+             <a class="nav-link text-info" href="#">Blog</a>
+             <a class="nav-link text-info" href="#">Contact</a>
+             </nav>
+             </div>
+           </div>
+           <div class="col-sm-9 bg-light">
+             <br>
+             <h4 class="content_h">Shirui Ye | HW4</h4>
+             <h4 class="content_h">Introduction & Explanation of the web page</h4>
+             <p class="content_h">This web page contains multiple modern front end developing techniques</p>
+             <p class="content_p move_left">1. Bootstrap settings: This page uses bootstrap settings. As a real-life front end
+                web developer, efficiency and quality are crucial factors. Applying Bootstrap settings can provide a nice and neat
+                responsive web layout. In addition, the coding speed will improve drastically since pre-set classes and elements
+                are available. In addition, custom classes can be nested inside bootstrap class. In this case, the web layout and code style
+                can be more personalized and unique. Please enjoy this responsive web page.
+             </p>
+             <p class="content_p move_left">
+                2. SaSS: Instead of using "dumb" CSS style coding. SaSS is used. CSS codes can become very long and have lots of nested
+                layers. More importantly, CSS cannot have logics, variables and many other programming language features. SaSS solves
+                all these issues. If you want to learn more about this SaSS structure in my layout, please make sure download all 4 files
+                (index.html, lab5_assignment.css, lab5_assignment.css.map, lab5_assignment.scss). Do NOT just download .html file and
+                .css file.
+             </p>
+             <p class="content_p move_left">
+                3. Web Animation: This web page doesn't introduce some complex packages for animations.(i.e. d3.js, Canvas). CSS and Computer
+                Graphics theories are used. For example, hover your mouse on the button below. This button is built by CSS, keyframes and Beizer
+                Curve Theory are applied to run the movement.
+                <br><a href="https://www.linkedin.com/in/shirui-ye/" class="jump_button1">Learn more about Shirui Ye</a>
+                <a href="https://frontendmasters.com/books/front-end-handbook/2018/what-is-a-FD.html" class="jump_button2">Frontend Developing</a><br>
+             </p>
+           </div>
+        </div>
+    </div>
+
+    <footer class="bg-secondary">
+      <p class="footer_p"><em><strong><a href="https://www.linkedin.com/in/shirui-ye/">Shirui Ye</a></strong></em> &copy; 2019</p>
+    </footer>
+
+  <!--below are Bootstrap JS settings, I set it here just in case for future cell-phone versions-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

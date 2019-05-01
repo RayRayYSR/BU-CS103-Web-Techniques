@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8"/>
+<title> Shirui Ye | lab10 assignment - Calculator </title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<style>
+        html{
+           background-color:black;
+        }
+        body {
+          background-color:black;
+        }
+        input[type="button"]{
+            background-color:grey;
+            border:1px solid grey;
+            display:inline-block;
+            color:#fff;
+            font-family:Arial;
+            font-size:50px;
+            line-height:30px;
+            text-decoration:none;
+            text-align:center;
+            margin-bottom:1.5px;
+            margin-left: 1.5px;
+            margin-right:1.5px ;
+            margin-top:1.5px ;
+            height: 75px;
+        }
+        input[type="button"]{
+        width: 184.5px;
+        }
+        #btnres {
+            height: 60px;
+            width: 942px;
+            margin-top: 3px;
+        }
+        #btn0,#btnC{
+                width:372px;
+        }
+        #btn0,#btndec,#btndiv {
+            margin-right: 0.1px;
+        }
+        #btn7,#btn4,#btn1,#btn0,#btnres {
+            margin-left: 0.01px;
+        }
+        input[type="button"]:active {
+            position:relative;
+            background:#989898;
+        }
+        input:focus {
+            outline:0;
+        }
+        input[type="Text"] {
+            text-align: center;
+            padding-left: 10px;
+            margin-bottom: 1.5px;
+            font-size: 66.5px;
+            background-color: black;
+            height:150px;
+            width: 100%;
+            border:none;
+            color:white;
+        }
+    </style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+      <center><FORM style="background-color:black;" name="Keypad" action="">
+          <center><h1 style="background-color:black; color:white; font-size:80px;">Calculator</h1></center>
+          <input name="ReadOut" id="output" type="Text" size=24 value="0" readonly>
+          <table style="background-color:black;">
+              <tr>
+                  <td><input id="btn7" type="Button" value="  7  " onclick="numInput(7)"></td>
+                  <td><input id="btn8" type="Button" value="  8  " onclick="numInput(8)"></td>
+                  <td><input id="btn9" type="Button" value="  9  " onclick="numInput(9)"></td>
+                  <td colspan="2"><input id="btnC" type="Button" value="Clear" onclick="Clear()"></td>
+              </tr>
+              <tr>
+                  <td><input id="btn4" type="Button" value="  4  " onclick="numInput(4)"></td>
+                  <td><input id="btn5" type="Button" value="  5   " onclick="numInput(5)"></td>
+                  <td><input id="btn6" type="Button" value="  6  " onclick="numInput(6)"></td>
+                  <td><input id="btndiv" type="Button" value="   /   " onclick="calc('/')"></td>
+                  <td><input id="btnplus" type="Button" value="  +  " onclick="calc('+')"></td>
+              </tr>
+              <tr>
+                  <td><input id="btn1" type="Button" value="  1  " onclick="numInput(1)"></td>
+                  <td><input id="btn2" type="Button" value="  2  " onclick="numInput(2)"></td>
+                  <td><input id="btn3" type="Button" value="  3  " onclick="numInput(3)"></td>
+                  <td><input id="btnmulti" type="Button" value="  *  " onclick="calc('*')"></td>
+                  <td><input id="btnminus" type="Button" value="   -   " onclick="calc('-')"></td>
+              </tr>
+          </table>
+          <input id="btn0" type="Button" value="  0  " onclick="numInput(0)">
+          <input id="btndec" type="Button" value="   .  " onclick="Decimal()">
+          <input id="btn-ve" type="Button" value=" -ve " onclick="minus_symbol()">
+          <input id="btnpower" type="Button" value="   ^   " onclick="calc('^')">
+          <input id="btnres" type="Button" value="  =  " onclick="calc('=')">
+      </FORM></center>
+
+    <script>
+        var KP = document.Keypad;
+        var progress = "";
+        var result = 0;
+        var bool = false;
+        function numInput (Num) {
+            if (bool) {
+                KP.ReadOut.value  = Num;
+                bool = false;
+            }
+            else {
+                if (KP.ReadOut.value == "0")
+                    KP.ReadOut.value = Num;
+                else
+                    KP.ReadOut.value += Num;
+            }
+        }
+        function calc (current) {
+            var Readout = KP.ReadOut.value;
+            if (bool && progress != "=");
+            else
+            {
+                bool = true;
+                if ( '+' == progress )
+                    result += parseFloat(Readout);
+                else if ( '*' == progress )
+                    result *= parseFloat(Readout);
+                else if ( '^' == progress )
+                    result **= parseFloat(Readout);
+                else if ( '-' == progress )
+                    result -= parseFloat(Readout);
+                else if ( '/' == progress )
+                    result /= parseFloat(Readout);
+                else
+                    result = parseFloat(Readout);
+                KP.ReadOut.value = result;
+                progress = current;
+            }
+        }
+        function Decimal () {
+            var curReadOut = KP.ReadOut.value;
+            if (bool) {
+                curReadOut = "0.";
+                bool = false;
+            }
+            else
+            {
+                if (curReadOut.indexOf(".") == -1)
+                    curReadOut += ".";
+            }
+            KP.ReadOut.value = curReadOut;
+        }
+        function Clear () {
+            result = 0;
+            progress = "";
+            KP.ReadOut.value = "0";
+            bool = true;
+        }
+        function minus_symbol () {
+            KP.ReadOut.value = parseFloat(KP.ReadOut.value) * -1;
+        }
+        function Percent () {
+            KP.ReadOut.value = (parseFloat(KP.ReadOut.value) / 100) * parseFloat(result);
+        }
+    </script>
+
+<!--below are Bootstrap JS settings, I set it here just in case for future cell-phone versions-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

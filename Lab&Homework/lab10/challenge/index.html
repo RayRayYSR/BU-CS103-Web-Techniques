@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+
+body {
+  background:black;
+}
+
+.clock {
+  margin-left:auto;
+  margin-right:auto;
+  width:800px;
+  margin-top: 10%;
+  color:#fff;
+  background:grey;
+}
+
+#Date {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:36px;
+  text-align:center;
+  text-shadow:0 0 5px #00c6ff;
+}
+
+ul {
+  width:800px;
+  margin:0 auto;
+  padding:0px;
+  list-style:none;
+  text-align:center;
+}
+
+ul li {
+  display:inline;
+  font-size:10em;
+  text-align:center;
+  font-family:Arial, Helvetica, sans-serif;
+  text-shadow:0 0 5px #00c6ff;
+}
+
+#point {
+  position:relative;
+  -moz-animation:mymove 1s ease infinite;
+  -webkit-animation:mymove 1s ease infinite;
+  padding-left:10px; padding-right:10px;
+}
+
+@-webkit-keyframes mymove 
+{
+0% {opacity:1.0; text-shadow:0 0 20px #00c6ff;}
+50% {opacity:0; text-shadow:none; }
+100% {opacity:1.0; text-shadow:0 0 20px #00c6ff; }    
+}
+
+@-moz-keyframes mymove 
+{
+0% {opacity:1.0; text-shadow:0 0 20px #00c6ff;}
+50% {opacity:0; text-shadow:none; }
+100% {opacity:1.0; text-shadow:0 0 20px #00c6ff; }    
+}
+  </style>
+</head>
+
+<body>
+  <!--code from https://codepen.io/natalibergeron/pen/yJeOEO and https://codepen.io/deegill/pen/iqJFK-->
+
+  <div style="color:white;font-size:116px;text-align:center;" id="output"></div>
+
+  <div class="clock">
+    <div id="Date"></div>
+    <ul>
+        <li id="hours"></li>
+        <li id="point">:</li>
+        <li id="min"></li>
+        <li id="point">:</li>
+        <li id="sec"></li>
+    </ul>
+</div>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://cs-people.bu.edu/ysr1126/cs103/lab10/index.js"></script>
+
+  <script>
+    var today = new Date();
+
+var day = today.getDate();
+var month = today.getMonth() + 1;
+var year = today.getFullYear();
+
+if (day < 10) {
+  day = '0' + day
+}
+if (month < 10) {
+  month = '0' + month
+}
+
+var out = document.getElementById("output");
+
+out.innerHTML = day + "/" + month + "/" + year;
+  </script>
+</body>
+
+</html>

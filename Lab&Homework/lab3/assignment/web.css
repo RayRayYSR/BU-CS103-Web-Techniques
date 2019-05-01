@@ -1,0 +1,111 @@
+/*
+My problem 2 is attached to 2 style sheets. One is web.css the other one is bootstrap so that the web
+page is cell-phone friendly.
+The content of the html page is an introduction about me. The lab 2 is related to my final project since
+some contents and animations of lab 2 will be used in my final project.
+*/
+div {
+  text-align: center;
+}
+ul,ol {
+  display: inline-block;
+  text-align: left;
+  color:green;
+}
+h1{
+  background-color:red;
+}
+h2{
+  background-color:pink;
+}
+.emphasize{
+  white-space: nowrap;
+  color: #8C001A;
+  font-size: 20px;
+  -webkit-animation: twinkling 3s infinite ease-in-out;
+}
+p{
+  text-align:center;
+  font-style: italic;
+  font-size: 16px;
+}
+@-webkit-keyframes twinkling{
+	            0%{
+		           opacity:1;
+	            }
+                4%{
+                  color:#FF0000;
+                }
+                8%{
+                  color:#FF4000;
+                }
+                12%{
+                  color:#FF8000;
+                }
+                16%{
+                  color:#FACC2E;
+                }
+                20%{
+                  color:#FFFF00;
+                }
+                24%{
+                  color:#BFFF00;
+                }
+                28%{
+                  color:#40FF00;
+                }
+	            32%{
+		          color:#01DF01;
+                }
+                36%{
+                  color:#01DF74;
+                }
+                40%{
+                  color:#01DFA5;
+                }
+                44%{
+                  color:#01A9DB;
+                }
+                48%{
+                  color:#00BFFF;
+                }
+                52%{
+                  color:#0080FF;
+                }
+                56%{
+                  color:#0040FF;
+                }
+                60%{
+                  color:#0101DF;
+                }
+                64%{
+                  color:#3A01DF;
+                }
+                68%{
+                  color:#3104B4;
+                }
+                72%{
+                  color:#7401DF;
+                }
+                76%{
+                  color:#8904B1;
+                }
+                80%{
+                  color:#A901DB;
+                }
+                84%{
+                  color:#DF01D7;
+                }
+                88%{
+                  color:#FF00FF;
+                }
+                92%{
+                  color:#DF0174;
+                }
+                96%{
+                  color:#FF0040;
+                }
+                100%{
+                  opacity:1;
+                }
+                }

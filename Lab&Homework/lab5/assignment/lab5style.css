@@ -1,0 +1,81 @@
+* {margin:0;
+   padding:0;
+   box-sizing: border-box;}
+
+@media (max-width: 768px) {
+     .large_nav {
+    display: none;
+      }
+     #rowcolor{
+       background-color:#FBEEC1;
+}
+    }
+
+       @media (min-width: 768px) {
+         .small_nav {
+           display: none;
+         }
+        }
+           @media (max-width: 500px) {
+             #food {
+               display: none; } }
+
+body{font-family: Copperplate, "Copperplate Gothic Light",fantasy;}
+
+header {font-size: calc(8px + 2vw);
+        text-align: center;
+        background-color: #8D8741;
+	    border-bottom: dotted black;
+        padding: 20px 0;
+}
+
+.row-body {float: left;
+		   width: 100%;
+           background-color: #DAAD86;
+           border-bottom: dotted black;}
+
+.column-nav {float: left;
+             width: 22%;
+             background-color: #DAAD86;
+             }
+ul#nav {text-align: center;}
+
+nav li {list-style-type: none;
+		background-color: #659DBD;
+        margin: 10px;
+        text-decoration: none;}
+
+nav a {display: inline-block;
+       padding: 15px 0;
+	   text-decoration: none;
+       color: black;
+       font-size: calc(8px + 1vw);}
+
+.column-body {float: left;
+			  width: 78%;
+              background-color: #FBEEC1;
+              padding: 2% 5% 2% 5%;
+              border-left: solid black;}
+
+#environment {padding: 2% 0;
+              font-size: calc(5px + 1vw);}
+#environment h2 {padding: 4px 0;}
+
+#food {padding: 2% 0;
+       font-size: calc(5px + 1vw);}
+#food h2 {padding: 4px 0;}
+
+#funfacts {padding: 2% 0;
+           font-size: calc(5px + 1vw);}
+#funfacts h2 {padding: 4px 0;}
+#funfacts ul {padding-left: 4%;}
+#funfacts li {padding: 3px;}
+
+
+footer {clear: both;
+		background-color: #BC986A;
+		text-align: center;
+		padding: 5px;
+        font-size: calc(5px + 1vw);}
+
+footer p {padding: 5px; color: black;}

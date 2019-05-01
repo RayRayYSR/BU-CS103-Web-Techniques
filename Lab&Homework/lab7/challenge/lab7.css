@@ -1,0 +1,122 @@
+*{margin:0;box-sizing:border-box;}
+ .box1{
+   margin-top:3%;
+   height:50vh;
+   background-image: url("http://cs-people.bu.edu/ysr1126/cs103/lab7/challenge/1.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   position:absolute;
+   left:7%;
+   z-index:5;
+   transform: rotateZ(-12deg);
+   width:20%;
+   border:7px solid white;
+   box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+   margin-bottom: 3em;
+ }
+
+ .box2{
+   margin-top:3%;
+   background-image: url("http://cs-people.bu.edu/ysr1126/cs103/lab7/challenge/2.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   height:50vh;
+   width:20%;
+   border:7px solid white;
+   box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+   margin-bottom: 3em;
+   position:absolute;
+   left:25%;
+   transform: rotateZ(4deg);
+ }
+
+ .box3{
+   margin-top:3%;
+   height:50vh;
+   background-image: url("http://cs-people.bu.edu/ysr1126/cs103/lab7/challenge/3.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   position:absolute;
+   left:45%;
+   z-index:5;
+   transform: rotateZ(-12deg);
+   width:20%;
+   border:7px solid white;
+   box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+   margin-bottom: 3em;
+ }
+
+ .box4{
+   margin-top:3%;
+   background-image: url("http://cs-people.bu.edu/ysr1126/cs103/lab7/challenge/4.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   height:50vh;
+   width:20%;
+   border:7px solid white;
+   box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+   margin-bottom: 3em;
+   position:absolute;
+   left:65%;
+   transform: rotateZ(4deg);
+ }
+
+ .text{
+   color:pink;
+   text-align: center;
+   margin:0;
+   padding-top:15vh;
+   font-family:cursive;
+   background-color: rgba(0, 0, 0, 0.7);
+   height:100%;
+   opacity:0;
+ }
+
+ .box1:hover .text{
+   opacity:1;
+ }
+
+ .box2:hover .text{
+   opacity:1;
+ }
+
+ .box3:hover .text{
+   opacity:1;
+ }
+
+ .box4:hover .text{
+   opacity:1;
+ }
+
+ .box2:hover{
+      z-index:10;
+ }
+
+ .box3:hover{
+      z-index:15;
+ }
+
+ .box4:hover{
+      z-index:20;
+ }
+
+ .text{
+   transition: opacity 2s linear;
+ }
+
+ .rotate-boxes{
+   position:relative;
+ }
+
+
+
+ .wrapper{
+   width:90%;
+   height:80vh;
+   margin:0 auto;
+   background-color: black;
+ }

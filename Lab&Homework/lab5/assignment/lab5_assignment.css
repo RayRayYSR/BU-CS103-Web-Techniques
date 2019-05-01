@@ -1,0 +1,170 @@
+@charset "UTF-8";
+* {
+  font-family: "Helvetica Neue", "Lucida Grande", "Lucida Sans", "Lucida Sans Unicode", sans-serif; }
+
+.title_p {
+  text-align: center;
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  margin: 0px;
+  color: white; }
+
+.title {
+  text-align: center;
+  font-size: calc(25px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  color: white; }
+
+@media (min-width: 768px) {
+  .small_nav {
+    display: none; } }
+@media  (max-width: 768px) {
+  .large_nav {
+    display: none; } }
+.move_left {
+  margin-left: 5%; }
+
+.no-x-bar {
+  overflow-x: hidden; }
+
+.content_h {
+  font-size: calc(25px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  text-align: center; }
+
+.content_p {
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300))); }
+
+.single em {
+  margin: 0 auto;
+  background: url(http://img04.yesmyimg.com/images/event/2014/11/018403/icon.png) no-repeat center center;
+  cursor: pointer;
+  display: block;
+  position: relative; }
+
+.single em:after {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: 0 0 1px 2px rgba(255, 255, 255, 0.8);
+  top: 50%;
+  left: 50%;
+  margin-top: -60px;
+  margin-left: -60px;
+  z-index: 3;
+  opacity: 0;
+  -webkit-animation: halo 1s 0.5s infinite ease-out;
+  -moz-animation: halo 1s 0.5s infinite ease-out;
+  animation: halo 1s 0.5s infinite ease-out; }
+
+@-webkit-keyframes halo {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.1); }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.2); } }
+@-moz-keyframes halo {
+  0% {
+    opacity: 0;
+    -moz-transform: scale(0.1); }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    -moz-transform: scale(1.2); } }
+@-ms-keyframes halo {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@-o-keyframes halo {
+  0% {
+    opacity: 0;
+    -o-transform: scale(0.1); }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    -o-transform: scale(1.2); } }
+@keyframes halo {
+  0% {
+    opacity: 0;
+    transform: scale(0.1); }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    transform: scale(1.2); } }
+.jump_button1 {
+  float: left;
+  font-size: calc(10px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  padding: 5px 16px 5px 16px;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black; }
+
+.jump_button1:hover {
+  background-color: white;
+  color: black;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: buzz-out;
+  animation-iteration-count: infinite;
+  transform-origin: center bottom;
+  cursor: pointer; }
+
+.jump_button2 {
+  margin-right: 2%;
+  float: right;
+  font-size: calc(10px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  padding: 5px 16px 5px 16px;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black; }
+
+.jump_button2:hover {
+  background-color: white;
+  color: black;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: buzz-out;
+  animation-iteration-count: infinite;
+  transform-origin: center bottom;
+  cursor: pointer; }
+
+@-webkit-keyframes buzz-out {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    /*Beizer-Curve： X1 Y1 X2 Y2*/
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 0, 0); }
+  40%,
+  43% {
+    transition-timing-function: cubic-bezier(0.755, 0.5, 0.855, 0.06);
+    transform: translate3d(0, -30px, 0); }
+  70% {
+    transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -15px, 0); }
+  90% {
+    transform: translate3d(0, -4px, 0); } }
+.footer_p {
+  text-align: center;
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  margin: 0px; }
+
+/*# sourceMappingURL=lab5_assignment.css.map */
